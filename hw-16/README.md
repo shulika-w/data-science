@@ -47,7 +47,7 @@ Supported classes:
 
 ## 🌐 Live Demo
 
-The application is deployed on Streamlit Cloud and can be accessed [here](https://hw16sw.streamlit.app).
+The application is deployed on Streamlit Cloud and can be accessed [here](https://hw16sw2.streamlit.app).
 
 ## ⭐️ Show your support
 
