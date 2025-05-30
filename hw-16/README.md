@@ -2,7 +2,7 @@
 
 Fashion Image Classification App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hw16sw.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hw16sw2.streamlit.app)
 
 A bilingual (English/Ukrainian) web application for classifying fashion items using CNN and VGG16 neural networks.
 
