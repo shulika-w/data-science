@@ -102,16 +102,27 @@ def plot_training_history(history):
 # Завантаження моделей
 @st.cache_resource
 def load_cnn_model():
+    model_path = 'cnn_model.keras'        
+    file_id = "1xjsR3_9b2njsSsTyS2xrrtLzLS-k3krK"
+    url = f"https://drive.google.com/uc?id={file_id}"
+
     try:
-        model = load_model('cnn_model.keras', compile=False)        
+        # Завантажуємо файл, якщо він ще не існує
+        if not os.path.exists(model_path):
+            with st.spinner("Завантаження моделі..."):
+                gdown.download(url, model_path, quiet=False)
+
+        # Завантажуємо модель
+        model = load_model(model_path, compile=False)
         return model
+
     except Exception as e:
         st.error(f"Помилка завантаження CNN моделі: {str(e)}")
         return None
 
 @st.cache_resource
 def load_vgg16_model():
-    model_path = "vVGG16_model.keras"
+    model_path = "VGG16_model.keras"
     file_id = "1wF6T2V1_EmjwmPJ4sfeEVWm6ggHQltMw"
     url = f"https://drive.google.com/uc?id={file_id}"
     
